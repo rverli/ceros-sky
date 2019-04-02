@@ -8,6 +8,8 @@ LABEL com.ceros.company="ceros" \
       com.ceros.maintainer.skype="rverli" \
       com.ceros.maintainer.email="renan@rverli.com.br"
 
+ENV PORT=80
+
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -19,6 +21,6 @@ RUN npm install
 COPY . .
 
 # Exposing app ports
-EXPOSE 5000
+EXPOSE 80
 
 CMD [ "npm", "start" ]
