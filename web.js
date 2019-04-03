@@ -1,4 +1,4 @@
-var port = Number(process.env.PORT || 80);
+var port = Number(process.env.PORT || 5000);
 var httpServer = require('http-server');
 var server = httpServer.createServer({});
 server.listen(port, '0.0.0.0', function() {

@@ -8,8 +8,6 @@ LABEL com.ceros.company="ceros" \
       com.ceros.maintainer.skype="rverli" \
       com.ceros.maintainer.email="renan@rverli.com.br"
 
-#ENV PORT=80
-
 # Create app directory
 WORKDIR /usr/src/app
 
@@ -22,5 +20,8 @@ COPY . .
 
 # Exposing app ports
 EXPOSE 80
+
+ARG PORT=80
+ENV PORT=$PORT
 
 CMD [ "npm", "start" ]
